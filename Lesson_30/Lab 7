@@ -1,0 +1,18 @@
+function listRecords(tableName,limit){
+	var ls=[];
+	var gr=new GlideRecord(tableName);
+	if(limit && limit>0){
+		gr.setLimit(limit);
+	}
+	gr.query();
+
+	while(gr.next()){
+		var ob={};
+		ob.diaplay_value = gr.getDisplayValue();
+		ob.sys_id = gr.getUniqueValue();
+		ls.push(ob);
+	}
+	return ls;
+}
+var lz = listRecords('incident',10);
+gs.info(JSON.stringify(lz,null,4));
