@@ -6,5 +6,5 @@ gs.info("Current User Id: "+ user.getID());
 gs.info("Current User Roles : \n "+ user.getRoles());
 
 gs.info(" \n Current Instance : "+ gs.getProperty('instance_name'));
-gs.info("  Current url : "+ gs.getProperty('instance_url'));
+gs.info("  Current url : "+ gs.getProperty('glide.servlet.uri'));
 
