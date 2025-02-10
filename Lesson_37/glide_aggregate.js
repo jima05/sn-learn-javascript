@@ -43,5 +43,5 @@ ga.addAggregate('AVG','priority');
 ga.query();
 
 while(ga.next()){
-gs.info('Average Priority for : '+ ga.getDisplayValue('assignment_group') + ' : ' + ga.getAggregate('AVG','priority');
+gs.info('Average Priority for : '+ ga.getDisplayValue('assignment_group') + ' : ' + ga.getAggregate('AVG','priority'));
 }
